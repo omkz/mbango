@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :sale_details
-  resources :sales
   constraints subdomain: 'api' do
     scope module: 'api' do
       namespace :v1 do
@@ -10,6 +8,8 @@ Rails.application.routes.draw do
         resources :product_images
         resources :product_prices
         resources :product_categories
+        resources :sale_details
+        resources :sales
       end
     end
   end
